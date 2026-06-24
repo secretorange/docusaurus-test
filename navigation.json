@@ -1,0 +1,88 @@
+[
+  {
+    "label": "Docs",
+    "type": "tab",
+    "path": "docs",
+    "children": [
+      {
+        "label": "Introduction",
+        "type": "page",
+        "path": "docs/intro.md"
+      },
+      {
+        "label": "Getting Started",
+        "type": "folder",
+        "children": [
+          {
+            "label": "Quickstart",
+            "type": "page",
+            "path": "docs/getting-started/quickstart.md"
+          },
+          {
+            "label": "System Requirements",
+            "type": "page",
+            "path": "docs/getting-started/system-requirements.md"
+          }
+        ]
+      },
+      {
+        "label": "Modules",
+        "type": "folder",
+        "children": [
+          {
+            "label": "Manage Workforce",
+            "type": "page",
+            "path": "docs/modules/manage-workforce.md"
+          },
+          {
+            "label": "Manage Work on Site",
+            "type": "page",
+            "path": "docs/modules/manage-work-on-site.md"
+          },
+          {
+            "label": "Manage Operational Risk",
+            "type": "page",
+            "path": "docs/modules/manage-operational-risk.md"
+          }
+        ]
+      },
+      {
+        "label": "Guides",
+        "type": "folder",
+        "children": [
+          {
+            "label": "Pre-qualify a Company",
+            "type": "page",
+            "path": "docs/guides/prequalify-a-company.md"
+          },
+          {
+            "label": "Verify Worker Competency",
+            "type": "page",
+            "path": "docs/guides/worker-competency.md"
+          },
+          {
+            "label": "Site Access Control",
+            "type": "page",
+            "path": "docs/guides/site-access-control.md"
+          },
+          {
+            "label": "Risk Profiling",
+            "type": "page",
+            "path": "docs/guides/risk-profiling.md"
+          }
+        ]
+      },
+      {
+        "label": "Support",
+        "type": "folder",
+        "children": [
+          {
+            "label": "FAQ",
+            "type": "page",
+            "path": "docs/support/faq.md"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,30 +1,100 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global styles. Infima (bundled with the classic theme) provides the base;
+ * the overrides below give a clean, modern SaaS product-docs look.
  */
 
-/* You can override the default Infima variables here. */
+/* Brand palette (indigo) */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #4f46e5;
+  --ifm-color-primary-dark: #3f37d4;
+  --ifm-color-primary-darker: #3b34c8;
+  --ifm-color-primary-darkest: #302aa5;
+  --ifm-color-primary-light: #635bea;
+  --ifm-color-primary-lighter: #6f67ec;
+  --ifm-color-primary-lightest: #918bf0;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
+
+  /* Typography */
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --ifm-heading-font-weight: 650;
+  --ifm-font-weight-semibold: 600;
+
+  /* Layout / feel */
+  --ifm-navbar-height: 3.75rem;
+  --ifm-global-radius: 0.5rem;
+  --ifm-navbar-shadow: none;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-toc-border-color: transparent;
+  --ifm-menu-color: #475569;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Lighter palette for dark mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #a5b4fc;
+  --ifm-color-primary-dark: #8b9bfa;
+  --ifm-color-primary-darker: #7d8ff9;
+  --ifm-color-primary-darkest: #5468f6;
+  --ifm-color-primary-light: #bfc9fe;
+  --ifm-color-primary-lighter: #cdd4fe;
+  --ifm-color-primary-lightest: #f0f2ff;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-background-color: #0b1120;
+  --ifm-background-surface-color: #111827;
+  --ifm-menu-color: #cbd5e1;
+}
+
+/* Navbar: subtle border instead of heavy shadow */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color, #e2e8f0);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #1f2937;
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+/* Sidebar: tighter, pill-style active state */
+.menu {
+  font-size: 0.9rem;
+  padding: 1rem 0.75rem !important;
+}
+.menu__link {
+  border-radius: var(--ifm-global-radius);
+  padding: 0.4rem 0.75rem;
+}
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  color: #0b1120;
+}
+.menu__list-item-collapsible .menu__link--active {
+  background: transparent;
+  color: var(--ifm-color-primary);
+}
+
+/* Content: comfortable measure for reading */
+.markdown {
+  --ifm-h1-font-size: 2.25rem;
+}
+
+/* Buttons / cards a touch softer */
+.button {
+  border-radius: var(--ifm-global-radius);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+.card {
+  border: 1px solid var(--ifm-toc-border-color, #e2e8f0);
+  border-radius: 0.75rem;
+}
+[data-theme='dark'] .card {
+  border-color: #1f2937;
 }

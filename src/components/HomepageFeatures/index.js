@@ -1,50 +1,56 @@
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Manage Workforce',
+    icon: '👷',
+    to: '/docs/modules/manage-workforce',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Pre-qualify companies, verify worker competency, deliver online
+        inductions, and control site access in real time — so only competent,
+        authorized people get to work.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Manage Work on Site',
+    icon: '🛠️',
+    to: '/docs/modules/manage-work-on-site',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Ensure all work is performed safely and efficiently, compliant with
+        legislation, across single or multiple locations — with permits and a
+        full audit trail.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Manage Operational Risk',
+    icon: '📊',
+    to: '/docs/modules/manage-operational-risk',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Profile risk visually, identify abnormal conditions, assign and track
+        mitigation actions, and verify that outcomes actually reduced the risk.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description, to}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
+      <Link to={to} className={styles.featureCard}>
+        <div className={styles.featureIcon} role="img" aria-hidden="true">
+          {icon}
+        </div>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -53,6 +59,14 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center">
+          <Heading as="h2" className={styles.featuresHeading}>
+            One platform, three modules
+          </Heading>
+          <p className={styles.featuresSubheading}>
+            Everything you need to protect your competent workforce.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
