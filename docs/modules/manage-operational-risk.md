@@ -5,16 +5,14 @@ description: Visual risk profiling, mitigation, and verification.
 
 # Manage Operational Risk
 
-The **Manage Operational Risk** module provides visual risk profiling so you can
-identify abnormal conditions, assess risk, act, and verify outcomes.
+The **Manage Operational Risk** module provides visual risk profiling so you can identify abnormal conditions, assess risk, act, and verify outcomes.
 
 > Sample content for demonstration purposes.
 
 ## Capabilities
 
 - **Visual risk profiling** — see risk across your asset at a glance.
-- **Identify abnormal conditions** — surface situations that fall outside
-  normal operating parameters.
+- **Identify abnormal conditions** — surface situations that fall outside normal operating parameters.
 - **Assess and prioritize** — score and rank risks for action.
 - **Mitigation actions** — create, assign, and track actions to completion.
 - **Verify outcomes** — confirm that mitigations achieved the intended result.
@@ -31,3 +29,11 @@ identify abnormal conditions, assess risk, act, and verify outcomes.
 
 - [Manage Workforce](manage-workforce.md)
 - [Manage Work on Site](manage-work-on-site.md)
+
+
+
+| Header ONe | two  | three |
+| ---------- | ---- | ----- |
+| tter       | kljl | lkj   |
+| lkj        | lkj  | lk    |
+| j          |      |       |
